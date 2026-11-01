@@ -9,7 +9,7 @@ const path = require("path");
 const mongoose =require("mongoose");
 const OM = require("./models/om.js");
 const ejsMate = require("ejs-Mate");
-const { NONAME } = require("dns");
+// const { NONAME } = require("dns");
 const session = require("express-session");
 const { MongoStore } = require("connect-mongo");
 const flash = require("connect-flash");
@@ -18,7 +18,6 @@ const {storage} = require("./cloudConfig.js");
 const oms = require("./routes/om.js");
 
 
-// const MONGO_URL = "mongodb://127.0.0.1:27017/OM"
 
 const dbUrl = process.env.ATLASDB_URL;
 
@@ -48,7 +47,7 @@ app.use(express.json());
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {
-        secret:"mysupersecretcode",
+        secret: process.env.SECRET,
     },
     touchAfter: 24 * 3600,
 });
@@ -59,7 +58,7 @@ store.on("error", () => {
 
 const sessionOptions = {
     store,
-    secret: "mysupersecretcode",
+    secret:  process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie:{
