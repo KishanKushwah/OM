@@ -1,0 +1,30 @@
+<nav class="navbar sm:navbar-expand bg-1 fg-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body">
+        
+        <div class="nav nav-pills navbar-nav" >
+          <a class="nav-link " aria-current="page" href="http:/oms">OM</a>
+          <a class="nav-link" href="https://bhuvan.nrsc.gov.in">Map</a>
+          <a class="nav-link" href="https://digitalseva.csc.gov.in">CSC</a>
+          <a class="nav-link" href="https://www.google.com/">Google</a>
+          <a class="nav-link" href="https://.drdo.gov.in/drdo/en/">DRDO</a>
+          <a class="nav-link" href="https://www.patanjaliayurved.net/">AYURVEDA</a>
+        </div>
+      </div>
+       <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="profileImage" />
+         <input type="file" name="coverImage" />
+        <button type="submit">Upload</button>
+       </form>
+    </dialog>
+  </div>
+</nav>

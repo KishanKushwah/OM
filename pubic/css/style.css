@@ -1,0 +1,133 @@
+/* *{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+} */
+body{
+    background-color: #292121;
+    height: 100%;
+    width: 100%;
+}
+.main{
+     background-color: #3f3030;
+     border: 0.5px solid rgb(12, 7, 7);
+     color:#222222;
+    border-radius: 2rem ; 
+    height: 700px;
+    margin-left: 150px;
+    margin-right: 100px;
+
+}
+.new{
+    background-color: #524646;
+    border: 0.5px solid rgb(37, 18, 18);
+    border-radius: 2rem ;
+    padding : 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: medium;
+    color: rgb(27, 17, 17);
+}
+/* .search{
+    border: 0.5px solid rgb(48, 27, 27);
+    border-radius: 2rem ;
+    padding : 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: medium;
+    color: white;
+} */
+.search-container{
+     background-color: #504444;
+    border: 0.5px solid rgb(12, 7, 7);
+    border-radius: 1.5rem ;
+    height: 40px;
+    width: 720px;
+    padding : 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    opacity: 1;
+    transition: width 0.4s;
+    color: black;
+}
+.submit{
+    background-color: rgb(24, 9, 10);
+    border: 0.5px solid rgb(196, 182, 182);
+    border-radius: 1.5rem ;
+    height: 40px;
+    width: 70px;
+    /* padding : 20px;
+    margin-left: 100px;
+    margin-right: 100px; */
+}
+
+.output{
+       border: 0.5px solid rgb(170, 153, 153);
+    border-radius: 2rem ;
+    padding : 20px;
+     margin-left: 100px;
+    margin-right: 100px;
+    font-size: medium;
+    color: rgb(228, 222, 222);
+}
+
+
+.input{
+    border: 0.5px solid rgb(114, 111, 111);
+    border-radius: 2rem ;
+    color:#ebebeb;
+
+}
+.submit{
+        border: 0.5px solid white;
+    border-radius: 2rem ;
+    margin:20px;
+
+}
+.nav{
+    background-color: rgb(38, 38, 53);
+    color: rgb(199, 187, 187);
+    font-style: bold;
+}
+.f-info{
+    background-color: #4d4d53;
+    color: white;
+
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+    color: #222222;
+
+}
+
+.f-info-socials,.f-info-links, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.f-info-socials i{
+      margin-right: 1rem;
+        font-size: 1.2rem;
+    
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 100%;
+    background-color:#160b0b;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+
+}
+.Home{
+    background-color: #4d4d53;
+    color:black;
+    margin:auto;
+}
+/* .main{
+    display:flex;
+
+} */
