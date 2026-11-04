@@ -11,7 +11,7 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'OM_DEV',
-    allowedFormats: ["png", "jpg", "jpeg", "pdf", "text"]
+    allowedFormats: ["png", "jpg", "jpeg", "pdf"]
    
   },
 });
