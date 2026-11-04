@@ -8,8 +8,8 @@ const app = express();
 const path = require("path");
 const mongoose =require("mongoose");
 const OM = require("./models/om.js");
-const ejsMate = require("ejs-Mate");
-// const { NONAME } = require("dns");
+const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const { MongoStore } = require("connect-mongo");
 const flash = require("connect-flash");
@@ -41,6 +41,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "pubic")));
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.json());
 
