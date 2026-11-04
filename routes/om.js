@@ -7,7 +7,7 @@ const multer  = require("multer");
 const {storage} = require("../cloudConfig.js");
 
 
-const uploads = multer({ dest: 'uploads/' })
+const uploads = multer({ storage })
 
 
 
