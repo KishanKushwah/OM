@@ -7,7 +7,7 @@ cloudinary.config({
     api_secret: process.env.CLOUD_API_SECRET
 });
 
-const storage = new CloudinaryStorage({
+const storage =  CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: 'OM_DEV',
