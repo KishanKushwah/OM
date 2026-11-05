@@ -26,7 +26,7 @@ body{
     margin-left: 100px;
     margin-right: 100px;
     font-size: medium;
-    color: rgb(27, 17, 17);
+    color: rgb(218, 211, 211);
 }
 /* .search{
     border: 0.5px solid rgb(48, 27, 27);
@@ -48,7 +48,7 @@ body{
     margin-right: 100px;
     opacity: 1;
     transition: width 0.4s;
-    color: black;
+    color: rgb(211, 199, 199);
 }
 .submit{
     background-color: rgb(24, 9, 10);

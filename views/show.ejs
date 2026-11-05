@@ -5,18 +5,18 @@
     <br>
   
   <div class="main ">
-      <br>
+    <br>
     <br>
 
     <div class="search">
-        <!-- <form action="/uploads" method="POST" enctype="multipart/form-data">
-        <input type="file" name="profileImage" />
-         <!<input type="file" name="coverImage" /> -->
-        <!-- <button type="submit">Upload</button> -->
-       <!-- </form> --> 
-      <form action="/oms/name" method="POST">
-        <input  type="text" placeholder="search your text" name="name" class="search-container"/>
-       <!-- <button class="submit">Sumbit</button> -->
+      <form action="/oms/name" method="POST" enctype="multipart/form-data" >
+        <input  type="text" placeholder="search your text"name="name" class="search-container"/>
+             <input type="file" id="fileUpload" hidden>
+
+            <button class="upload-btn"
+             onclick="document.getElementById('fileUpload').click()">
+             📎     Upload
+    </button>
         <br>
         <br>
          <% for(let data of upcomingData) {%>
@@ -30,9 +30,9 @@
          <% } %>
        </form>
     </div>
+    <br> 
     <br>
-    <br>
-    <div>
+    <!-- <div>
       <form action="/oms" method="GET">
         <% for(let data of upcomingData) {%>
         <div class="new ">
@@ -44,7 +44,7 @@
          </div>
          <% } %>
       </form> 
-     </div>
+     </div> -->
        <br>
     <br>
   </div>

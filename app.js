@@ -13,11 +13,10 @@ const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const { MongoStore } = require("connect-mongo");
 const flash = require("connect-flash");
-const multer  = require("multer");
-const {storage} = require("./cloudConfig.js");
+
 const oms = require("./routes/om.js");
 
-
+// const MONGO_URL ="mongodb://127.0.0.1:27017/OM";
 
 const dbUrl = process.env.ATLASDB_URL;
 
@@ -33,7 +32,7 @@ async function main() {
 
 }
 
-const upload = multer({ storage});
+
 
 
 
@@ -70,9 +69,9 @@ const sessionOptions = {
 
 };
 
-// app.get("/", (req, res) => {
-//     res.send("Hi, I am root");
-// });
+app.get("/", (req, res) => {
+    res.send("Hi, I am root");
+});
 
 
 
@@ -119,13 +118,7 @@ app.get("/hello", (req,res)=>{
 
 
 
-app.post("/upload", upload.fields([{ name: "profileImage"}, { name: "coverImage"}]), (req, res)=>{
-       console.log(req.body);
-       console.log(req.file);
 
-       return res.redirect("/oms");
-
-});
 app.listen(8080, ()=>{
         console.log("Server is listening at port 8080");
 });
