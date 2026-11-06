@@ -16,9 +16,9 @@ const flash = require("connect-flash");
 
 const oms = require("./routes/om.js");
 
-// const MONGO_URL ="mongodb://127.0.0.1:27017/OM";
+ const MONGO_URL ="mongodb://127.0.0.1:27017/OM";
 
-const dbUrl = process.env.ATLASDB_URL;
+// const dbUrl = process.env.ATLASDB_URL;
 
 main()
    .then(()=>{
@@ -28,7 +28,7 @@ main()
    });
 
 async function main() {
-  await mongoose.connect(dbUrl);
+  await mongoose.connect(MONGO_URL);
 
 }
 
@@ -44,20 +44,20 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.json());
 
-const store = MongoStore.create({
-    mongoUrl: dbUrl,
-    crypto: {
-        secret: process.env.SECRET,
-    },
-    touchAfter: 24 * 3600,
-});
+// const store = MongoStore.create({
+//     mongoUrl: dbUrl,
+//     crypto: {
+//         secret: process.env.SECRET,
+//     },
+//     touchAfter: 24 * 3600,
+// });
 
-store.on("error", () => {
-    console.log("ERROR in MONGO SESSION STORE", err);
-});
+// store.on("error", () => {
+//     console.log("ERROR in MONGO SESSION STORE", err);
+// });
 
 const sessionOptions = {
-    store,
+    // store,
     secret:  process.env.SECRET,
     resave: false,
     saveUninitialized: true,
