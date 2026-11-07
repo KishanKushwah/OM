@@ -29,18 +29,39 @@
     <br> 
     <br>
     <div>
-      <!-- <form action="/oms" method="GET" enctype="multipart/form-data" > -->
-        
+      <!-- <form action="/oms" method="GET" enctype="multipart/form-data" > --> 
+        <!-- <div class="ms-auto">
+          <form action="/oms" method="GET" enctype="multipart/form-data" >
+            <input
+             class="form-control me-2"
+             type="search"
+             placeholder="Search"
+             aria-label="Search"
+            />
+
+            <button class="btn btn-search" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Search
+            </button>
+          </form>
+        </div> -->
+
         <div>
           <form action="/oms" method="GET" enctype="multipart/form-data" >
-        
+          
+            
            <input  type="text" placeholder="search your text"name="name" class="search-container"/>
-            <button class="btn-dark">Search</button>
+           
+            <div class="search-icon-contanier" title="Execute Search Request"></div>
+            <button class="btn btn-search" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+           </div>
         </div>
-       
-        <% for(let data of upcomingData) {%>
-        <div class="new ">
-            <%=  data.name  %>
+    
+          <% for(let data of upcomingData) {%>
+         <div class="new ">
+             <%=  data.name  %>
             <br>
             <%= data.marks %>
             <br>
