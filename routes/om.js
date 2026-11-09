@@ -12,17 +12,17 @@ const upload = multer({ storage });
 
 
 //index route
-router.get("/", wrapAsync(omController.index));
+// router.get("/", wrapAsync(omController.index));
 
-// router.post("/name", async(req,res)=>{
-//     let {name} = req.body;
-//     console.log(name);
-//     let upcomingData = await OM.find({name:name});
-//     console.log(upcomingData);
-//     req.flash("success", "New Request received");
-//     res.render("show.ejs", { upcomingData });
+router.post("/name", async(req,res)=>{
+    let {name} = req.body;
+    console.log(name);
+    let upcomingData = await OM.find({name:name});
+    console.log(upcomingData);
+    req.flash("success", "New Request received");
+    res.render("show.ejs", { upcomingData });
     
-// });
+});
 router.post("/name", upload.single('uploaded_file'), (req, res) => {
     res.send(req.file);
 });

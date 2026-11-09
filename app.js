@@ -16,9 +16,9 @@ const flash = require("connect-flash");
 
 const oms = require("./routes/om.js");
 
-//  const MONGO_URL ="mongodb://127.0.0.1:27017/OM";
+// const MONGO_URL ="mongodb://127.0.0.1:27017/OM";
 
- const dbUrl = process.env.ATLASDB_URL;
+const dbUrl = process.env.ATLASDB_URL;
 
 main()
    .then(()=>{
@@ -57,7 +57,7 @@ store.on("error", () => {
 });
 
 const sessionOptions = {
-    store,
+    // store,
     secret:  process.env.SECRET,
     resave: false,
     saveUninitialized: true,

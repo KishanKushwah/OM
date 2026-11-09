@@ -48,7 +48,7 @@ body{
      border: 0.5px solid rgb(12, 7, 7); 
      border-radius: 1.5rem ;
     height: 40px;
-    width: 535px;
+    width: 700px;
     padding : 20px;
     margin-left: 100px;
     margin-right: 100px;
@@ -58,11 +58,12 @@ body{
 }
 .submit{
     background-color: #504444;
-    border: 0.5px solid rgb(16, 7, 7);
+    border: 0.5px solid black;
     border-radius: 2.5rem ;
     height: 40px;
-    width: 40px;
+    width: 100px;
     display: inline-block;
+    color:#160b0b;  
     /* padding : 20px;
     margin-left: 100px;
     margin-right: 100px; */
