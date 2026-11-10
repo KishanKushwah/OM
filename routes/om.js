@@ -29,12 +29,12 @@ router.post("/name", upload.single('uploaded_file'), (req, res) => {
 
 router.get("/", async(req, res)=>{
    try{
-     let { name }= req.query;
+    let { name } = req.query;
     console.log(name);
     let upcomingData = await OM.find({name:name});
     console.log(upcomingData);
     res.render("show.ejs", { upcomingData });
-   }catch(err){
+    }catch(err){
     console.error(err);
     res.status(500).send("Error loading data");
    }

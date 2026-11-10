@@ -10,14 +10,14 @@
 
     <div class="search">
       <form action="/oms" method="GET" enctype="multipart/form-data" >
-        <input  type="text" placeholder="search your text"name="name" class="search-container"/>
+        <input  type="text" placeholder="search your text" name="name" email="email" class="search-container"/>
              <!-- <input type="file" /> -->
          <button class="submit">Search</button>
         <br>
         <br>
          <% for(let data of upcomingData) {%>
         <div class="new ">
-            <%=  data.name  %>
+           <%=  data.name  %> 
             <br>
             <%= data.marks %>
              <br>
